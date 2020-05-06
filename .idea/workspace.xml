@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a7c5418-7373-4956-84c2-77e3a7450af3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javabase.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabase/com/zhangds/owncollection/OwnArrayList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabase/com/zhangds/owncollection/OwnHashMap$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabase/com/zhangds/owncollection/OwnHashMap.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabase/com/zhangds/owncollection/OwnHashSet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabase/com/zhangds/owncollection/OwnLinkedList$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabase/com/zhangds/owncollection/OwnLinkedList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/owncollection/META-INF/owncollection.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zhangds/owncollection/OwnArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zhangds/owncollection/OwnHashMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zhangds/owncollection/OwnHashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zhangds/owncollection/OwnLinkedList.java" afterDir="false" />
-    </list>
+    <list default="true" id="9a7c5418-7373-4956-84c2-77e3a7450af3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,6 +131,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="36ecbe3f-fa1f-4651-bf3b-6b33ee96ae93" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -215,7 +200,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -241,12 +226,20 @@
       <updated>1588228897633</updated>
       <workItem from="1588228901754" duration="2079000" />
       <workItem from="1588725922130" duration="21145000" />
-      <workItem from="1588759816587" duration="390000" />
+      <workItem from="1588759816587" duration="604000" />
     </task>
+    <task id="LOCAL-00001" summary="java集合">
+      <created>1588760286764</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588760286764</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23614000" />
+    <option name="totallyTimeSpent" value="23828000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -289,6 +282,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="java集合" />
+    <option name="LAST_COMMIT_MESSAGE" value="java集合" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_212/src.zip!/java/util/ArrayList.java">
