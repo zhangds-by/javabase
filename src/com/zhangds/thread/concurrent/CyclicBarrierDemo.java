@@ -42,7 +42,7 @@ public class CyclicBarrierDemo {
 
         if(Thread.currentThread().getName().equals("Thread-0")) {
             System.out.println("当前等待屏障的同事" + barrier.getNumberWaiting());
-            barrier.reset();
+            barrier.reset(); //被中断，初始化：唤醒等待的任务，重置线程数
         }
 
         try {

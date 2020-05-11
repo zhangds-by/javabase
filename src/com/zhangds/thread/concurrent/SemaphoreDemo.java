@@ -29,6 +29,7 @@ public class SemaphoreDemo {
 
     public void method(Semaphore semaphore){
         try {
+            //获取许可证
             semaphore.acquire();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -36,6 +37,7 @@ public class SemaphoreDemo {
 
         System.out.println(Thread.currentThread().getName() + "is running =====" + semaphore.availablePermits());
 
+        //释放许可证
         semaphore.release();
     }
 }
