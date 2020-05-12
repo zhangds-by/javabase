@@ -5,6 +5,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.RecursiveTask;
 
 /**
+ * 并行计算
  * fork/join框架，大任务分解为独立的小任务，多线程处理并将处理结果合并
  * Create by zhangds
  * 2020-05-11 09:28
@@ -45,7 +46,7 @@ public class ForkJoinDemo extends RecursiveTask<Integer> {
     }
 
     public static void main(String[] args) throws Exception {
-        ForkJoinPool pool = new ForkJoinPool(20);
+        ForkJoinPool pool = new ForkJoinPool(20); //线程数量取决于CPU核数
         ForkJoinDemo demo = new ForkJoinDemo(1, 100);
         Future<Integer> future = pool.submit(demo);
 

@@ -8,7 +8,7 @@ import java.util.concurrent.BlockingQueue;
  * Create by zhangds
  * 2020-05-08 11:45
  **/
-public class BlockQueue<T> {
+public class OwnBlockQueue<T> {
 
     List<T> list = new ArrayList();
 

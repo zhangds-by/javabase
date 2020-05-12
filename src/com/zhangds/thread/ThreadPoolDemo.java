@@ -27,12 +27,19 @@ public class ThreadPoolDemo {
         pool.shutdownNow(); //立即关闭线程池，不执行阻塞中的线程
 
         //第二种
-        ExecutorService service = Executors.newFixedThreadPool(10);
+        Executors.newCachedThreadPool(); //一个任务创建一个线程
+        Executors.newSingleThreadExecutor(); // 固定大小为1
+        ExecutorService service = Executors.newFixedThreadPool(10); //固定大小
         service.execute(new Runnable() {
             @Override
             public void run() {
 
             }
+        });
+
+        //lambda, 相当于内部匿名内部线程
+        service.execute( () -> {
+
         });
 
         Future<?> submit = service.submit(new Runnable() {
@@ -41,6 +48,9 @@ public class ThreadPoolDemo {
 
             }
         });
+
+        //中断池中的一个线程
+        submit.cancel(true);
 
         ScheduledExecutorService service2 = Executors.newScheduledThreadPool(10);
         service2.schedule(new Runnable() {
@@ -51,6 +61,10 @@ public class ThreadPoolDemo {
         }, 5, TimeUnit.SECONDS);
 
 
+
+
+        service.shutdown();
+        service2.shutdown();
     }
 
 

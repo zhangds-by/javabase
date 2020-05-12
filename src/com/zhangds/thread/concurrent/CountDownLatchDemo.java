@@ -4,6 +4,10 @@ import java.util.Arrays;
 import java.util.concurrent.CountDownLatch;
 
 /**
+ * 用来控制一个线程等待多个线程。
+ * 维护了一个计数器 cnt，每次调用 countDown() 方法会让计数器的值减 1，减到 0
+ * 的时候，那些因为调用 await() 方法而在等待的线程就会被唤醒。
+ *
  * 多线程并发统计每行数字
  * Create by zhangds
  * 2020-05-09 14:11

@@ -1,4 +1,4 @@
-package com.zhangds.thread;
+package com.zhangds.thread.concurrent;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
@@ -6,6 +6,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 
 /**
+ * AQS是 JUC的核心
  * Create by zhangds
  * 2020-05-08 13:55
  **/

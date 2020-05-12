@@ -3,6 +3,7 @@ package com.zhangds.thread.concurrent;
 import java.util.concurrent.Semaphore;
 
 /**
+ * 可以控制对互斥资源的访问线程数
  * Create by zhangds
  * 2020-05-09 17:24
  **/
