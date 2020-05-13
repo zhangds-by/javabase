@@ -48,6 +48,9 @@ public class OwnHashMap<K, V> {
 
     }
 
+    /**
+     链表长度大于8，转换为红黑树
+     */
     public void put(K key, V value){
         Node<K, V> newNode = new Node(myHash(key.hashCode(), table.length), key, value, null);
         //放进数组
@@ -78,9 +81,12 @@ public class OwnHashMap<K, V> {
 
     }
 
-    public static  int  myHash(int  v, int length){
+    /**
+     * key的hash值和数组长度位运算的值作为table的索引
+     */
+    public static int myHash(int key, int length){
 //		System.out.println("hash in myHash:"+(v%(length-1)));		//取模运算，效率低
-        return  v&(length-1);
+        return  key&(length-1);
     }
 
     @Override

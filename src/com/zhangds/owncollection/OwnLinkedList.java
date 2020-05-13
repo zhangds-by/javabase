@@ -9,16 +9,16 @@ import java.util.LinkedList;
  **/
 public class OwnLinkedList<E> {
 
-    private Node head;
-    private Node tail;
-    private int size;
+    private Node<E> head;
+    private Node<E> tail;
+    private int size = 0;
 
     private static class Node<E> {
-        Node prev;
-        Node next;
+        Node<E> prev;
+        Node<E> next;
         E element;
 
-        public Node(Node prev, E element, Node next) {
+        public Node(Node<E> prev, E element, Node<E> next) {
             this.prev = prev;
             this.next = next;
             this.element = element;
@@ -33,17 +33,13 @@ public class OwnLinkedList<E> {
     public void add(int index, E element) {
         //加入尾节点
         if (index == size){
-            Node<E> newNode = new Node<E>(tail, element, null);
-            if (tail == null){
-                head = newNode;
-            }else {
-                tail.next = newNode;
-            }
+            addLast(element);
         }else {
             Node<E> temp = getNode(index);
             Node<E> up = temp.prev;
             Node<E> newNode = new Node<E>(up, element, temp);
-            if (up == null){
+            temp.prev = newNode;
+            if (up == null){ //获取的节点是首节点
                 head = newNode;
             }else {
                 up.next = newNode;
@@ -57,6 +53,32 @@ public class OwnLinkedList<E> {
             }*/
         }
         size++;
+    }
+
+    private void addHead(E e){
+        Node<E> f = head;
+        Node<E> newNode = new Node<>(null, e, f);
+        head = newNode; //头节点移动
+        if (f == null){ //头为空说明链表没有元素,尾节点也要指向插入节点
+            tail = newNode;
+        }else {
+            f.prev = newNode;
+        }
+        size++;
+    }
+
+    private void addLast(E e){
+        Node<E> l = tail;
+        Node<E> newNode = new Node<E>(l, e, null);
+        tail = newNode; //尾节点移动
+        if (l == null){ //最后一个节点为空，链表中没有元素
+            head = newNode;
+        }else {
+            l.next = newNode;
+        }
+    }
+    public int size(){
+        return size;
     }
 
     private Node<E> getNode(int index) {
@@ -75,6 +97,11 @@ public class OwnLinkedList<E> {
             }
         }
         return temp;
+    }
+
+    public E get(int index){
+        checkIndex(index);
+        return getNode(index).element;
     }
 
     public void  remove(int index){
@@ -103,7 +130,7 @@ public class OwnLinkedList<E> {
     }
 
     public void checkIndex(int index){
-        if (!(index<0 || index>size)){
+        if (index<0 || index>size){
             throw new IndexOutOfBoundsException("索引不合法");
         }
     }

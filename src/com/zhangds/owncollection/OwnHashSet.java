@@ -7,7 +7,7 @@ import java.util.HashMap;
  * Create by zhangds
  * 2020-05-06 17:54
  **/
-public class OwnHashSet {
+public class OwnHashSet<T> {
 
     private HashMap map;
 
@@ -21,7 +21,7 @@ public class OwnHashSet {
         return map.size();
     }
 
-    public void put(Object obj){
+    public void put(T obj){
         map.put(obj, PRESENT);
     }
 
