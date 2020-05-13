@@ -24,7 +24,7 @@ public class Client {
 		PrintWriter writer = null;
 		Scanner s = new Scanner(System.in);
 		try{
-			socket = new Socket(host, port);
+			socket = new Socket(host, port); //启动Socket发起网络请求
 			String message = null;
 			
 			reader = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));

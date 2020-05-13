@@ -7,6 +7,15 @@ import java.nio.channels.*;
 import java.util.Iterator;
 import java.util.Scanner;
 
+/**
+ * 同步非阻塞IO
+ * 服务器实现模式为一个请求一个通道，即客户端发送的连接请求都会注册到多路复用器上，
+ * 多路复用器轮询到连接有I/O请求时才启动一个线程进行处理。也就是一个请求一个通道一个处理线程模式。
+ *
+ * @Author zhangds
+ * @Date 2020/5/13 17:10
+ * @Return
+ */
 public class NIOServer implements Runnable {
 
 	// 多路复用器， 选择器。 用于注册通道的。

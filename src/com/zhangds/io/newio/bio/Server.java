@@ -6,6 +6,12 @@ import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * 同步阻塞I/O
+ * @Author zhangds
+ * @Date 2020/5/13 17:08
+ * @Return
+ */
 public class Server {
 
 	public static void main(String[] args) {
@@ -18,8 +24,8 @@ public class Server {
 			server = new ServerSocket(port);
 			System.out.println("server started!");
 			while(true){
-				Socket socket = server.accept();
-				service.execute(new Handler(socket));
+				Socket socket = server.accept();  //启动webSocket监听请求
+				service.execute(new Handler(socket));  //建立一个线程处理请求，一个连接一个处理线程
 			}
 		}catch(Exception e){
 			e.printStackTrace();
