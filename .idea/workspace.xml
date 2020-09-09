@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a7c5418-7373-4956-84c2-77e3a7450af3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zhangds/arth/leetcode/L0001TwoSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zhangds/arth/leetcode/L0002AddTwoNum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zhangds/arth/leetcode/base/ListNode.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/zhangds/common/model/Hero.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/zhangds/common/model/HeroVo.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/zhangds/common/util/BigDecimalUtils.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/zhangds/common/util/PrintUtils.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/zhangds/common/util/StreamUtils.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/zhangds/java8/Stream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zhangds/owncollection/OwnSingleLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zhangds/owncollection/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zhangds/owncollection/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +212,7 @@
       <workItem from="1596760531011" duration="6187000" />
       <workItem from="1599030990077" duration="719000" />
       <workItem from="1599557613097" duration="1948000" />
-      <workItem from="1599611894592" duration="8347000" />
+      <workItem from="1599611894592" duration="10044000" />
     </task>
     <task id="LOCAL-00001" summary="java集合">
       <created>1588760286764</created>
@@ -311,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594257490603</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="算法">
+      <created>1599622495233</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1599622495233</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +331,8 @@
     <MESSAGE value="网络IO编程" />
     <MESSAGE value="使用唤醒和等待" />
     <MESSAGE value="使用唤醒和等待、LockSupport使用" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用唤醒和等待、LockSupport使用" />
+    <MESSAGE value="算法" />
+    <option name="LAST_COMMIT_MESSAGE" value="算法" />
   </component>
   <component name="WindowStateProjectService">
     <state x="471" y="0" key="#Auto_Import" timestamp="1599613790664">
@@ -345,6 +347,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="484" y="299" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1599612291282" />
+    <state x="243" y="0" key="CommitChangelistDialog2" timestamp="1599622494543">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="243" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1599622494543" />
     <state width="1483" height="120" key="GridCell.Tab.0.bottom" timestamp="1599621548265">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -365,6 +371,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="246" y="81" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1599612577248" />
+    <state x="261" y="79" key="Vcs.Push.Dialog.v2" timestamp="1599622507971">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="261" y="79" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599622507971" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
