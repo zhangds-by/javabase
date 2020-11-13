@@ -1,6 +1,9 @@
 package com.zhangds.io.newio.nio.base;
 
+import com.zhangds.java8.stream.StreamUtil;
+
 import java.net.InetSocketAddress;
+import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
@@ -43,11 +46,28 @@ public class NIOServer {
 
             while (keyIterator.hasNext()) {
                 SelectionKey key = keyIterator.next();
-                if (key.isAcceptable()){
+                if (key.isAcceptable()){ //OP_ACCEPT，新客户端连接
+                    // 为连接的客户端生成一个 SocketChannel
                     SocketChannel socketChannel = serverSocketChannel.accept();
+                    System.out.println("客户端连接成功，生成SocketChannel" + socketChannel.hashCode());
+                    socketChannel.configureBlocking(false);
+                    socketChannel.register(selector, SelectionKey.OP_READ, ByteBuffer.allocate(1024));
+                    System.out.println("客户端连接注册的selectionKey" + selector.keys().size());
                 }
+                if (key.isReadable()){ // OP_READ
+                    // 通过key反向获取channel
+                    SocketChannel socketChannel = (SocketChannel) key.channel();
+                    // 获取channel关联的buffer
+                    ByteBuffer buffer = (ByteBuffer) key.attachment();
+                    socketChannel.read(buffer);
+                    System.out.println("客户端：" + new String(buffer.array()));
+                }
+                //移除当前的selectionKey， 防止重复操作
+                keyIterator.remove();
             }
+
 
         }
     }
+
 }
