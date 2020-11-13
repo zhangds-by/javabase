@@ -18,7 +18,7 @@ public class ClassDemo {
         String classpath = "com.zhangds.annoandreflect.Demo";
 
         Class clazz = Demo.class;
-        //获取指定方法参数泛型信息
+        //获取指定无返回值方法参数泛型信息
         Method method = clazz.getMethod("test01", Map.class, List.class);
         Type[] types = method.getGenericParameterTypes();
         for (Type paramType : types){
@@ -55,6 +55,22 @@ public class ClassDemo {
         Demo demo = demoClass.newInstance();
         //获取实例，指定构造器
         Demo demo1 = constructor.newInstance("zhangds");
+
+
+        /**
+         * 有返回值的方法参数泛型
+         */
+        Method method2 = Demo.class.getMethod("test02", null);
+        Type returnGenericParameterTypes = method2.getGenericReturnType();
+
+        // 遍历打印全部泛型
+        if(returnGenericParameterTypes instanceof ParameterizedType) {
+            Type[] actualTypeArguments = ((ParameterizedType) returnGenericParameterTypes).getActualTypeArguments();
+            for (Type actualTypeArgument : actualTypeArguments) {
+                System.out.println(actualTypeArgument);
+            }
+        }
+
 
     }
 }

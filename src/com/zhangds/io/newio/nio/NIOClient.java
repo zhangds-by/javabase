@@ -42,7 +42,7 @@ public class NIOClient {
 				if(readLength == -1){
 					break;
 				}
-				// 重置缓存游标
+				// 重置缓存游标，读写转换
 				buffer.flip();
 				byte[] datas = new byte[buffer.remaining()];
 				// 读取数据到字节数组。

@@ -51,9 +51,10 @@ public class Server {
 			BufferedReader reader = null;
 			PrintWriter writer = null;
 			try{
-				
+				//读取通道的数据
 				reader = new BufferedReader(
 						new InputStreamReader(socket.getInputStream(), "UTF-8"));
+				//写入响应信息
 				writer = new PrintWriter(
 						new OutputStreamWriter(socket.getOutputStream(), "UTF-8"));
 				String readMessage = null;

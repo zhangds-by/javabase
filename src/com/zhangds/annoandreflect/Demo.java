@@ -22,4 +22,9 @@ public class Demo {
 
     public void test01(Map<String,User> map, List<User> list){
     }
+
+    public Map<String, User> test02() {
+        System.out.println("test02");
+        return null;
+    }
 }
