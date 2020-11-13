@@ -1,2 +1,5 @@
-/.out/
-/.idea/
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/
+.out/
+src/com/zhangds/arth/datastruction/otherStrut/
