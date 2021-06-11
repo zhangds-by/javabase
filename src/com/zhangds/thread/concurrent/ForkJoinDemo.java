@@ -5,8 +5,14 @@ import java.util.concurrent.Future;
 import java.util.concurrent.RecursiveTask;
 
 /**
- * 并行计算
+ * 并行计算(条件拆分 -> 并行求值 -> 结果合并)
  * fork/join框架，大任务分解为独立的小任务，多线程处理并将处理结果合并
+ * 以递归的方式将并行的任务分成更小的任务，然后将每个子任务的结果合并起来生成整体结果
+ *
+ * ExecutorService接口的一个实现，把子任务分配给线程池张
+ *
+ * RecursiveTask<R> 并行化任务（以及所有子任务）产生的结果类型
+ * 任务不返回结果，则是RecursiveAction类型
  * Create by zhangds
  * 2020-05-11 09:28
  **/
@@ -21,6 +27,18 @@ public class ForkJoinDemo extends RecursiveTask<Integer> {
         this.end = end;
     }
 
+    /**
+     * 定义了将任务拆分成子任务的逻辑
+     * 以及无法再拆分或不方便再拆分时，生成单个子任务结果的逻辑
+     * if (任务足够小或不可分) {
+     *      顺序计算该任务
+     * } else {
+             将任务分成两个子任务
+     *       递归调用本方法，拆分每个子任务，等待所有子任务完成
+     *       合并每个子任务的结果
+     * }
+     * @return
+     */
     @Override
     protected Integer compute() {
         if(end - begin <= threshold) {
