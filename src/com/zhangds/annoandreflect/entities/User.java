@@ -1,4 +1,4 @@
-package com.zhangds.annoandreflect;
+package com.zhangds.annoandreflect.entities;
 
 /**
  * Create by zhangds

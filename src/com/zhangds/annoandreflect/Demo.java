@@ -1,5 +1,7 @@
 package com.zhangds.annoandreflect;
 
+import com.zhangds.annoandreflect.entities.User;
+
 import java.util.List;
 import java.util.Map;
 

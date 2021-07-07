@@ -1,5 +1,7 @@
 package com.zhangds.annoandreflect;
 
+import com.zhangds.annoandreflect.entities.User;
+
 /**
  *
  * Create by zhangds
@@ -8,7 +10,7 @@ package com.zhangds.annoandreflect;
 public class ReflectionDemo {
 
     public static void main(String[] args) throws ClassNotFoundException {
-        String classpath = "com.zhangds.annoandreflect.User";
+        String classpath = "com.zhangds.annoandreflect.entities.User";
 
         Class clazz = Class.forName(classpath); // ClassNotFoundException
 
