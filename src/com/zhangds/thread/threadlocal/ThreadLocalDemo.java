@@ -1,4 +1,4 @@
-package com.zhangds.thread;
+package com.zhangds.thread.threadlocal;
 
 /**
  * Create by zhangds
